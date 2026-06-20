@@ -266,10 +266,16 @@ nav.links a:hover::after{width:100%}
   padding-top:84px;
 }
 .hero-bg{
+  display:none;
   position:absolute;inset:0;z-index:-3;
   background-image:url('assets/hero.jpg');
   background-size:cover;background-position:50% 38%;
   transform:scale(1.06);
+  will-change:transform;
+}
+.hero-video{
+  position:absolute;inset:0;z-index:-3;
+  width:100%;height:100%;object-fit:cover;
   will-change:transform;
 }
 .hero::before{ /* top + bottom scrims */
@@ -805,7 +811,7 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
   .hero-inner{gap:10px}
   .foot-grid{gap:28px}
   .wordmark{font-size:clamp(2.6rem,10vw,3.4rem)}
-  .hero-bg{background-image:url('assets/hero-mobile.jpg');background-position:50% 25%}
+  .hero-bg{display:block;background-image:url('assets/hero-mobile.jpg');background-position:50% 25%}
   .hero .presenters-line{order:5;font-size:.65rem;letter-spacing:.06em;margin-bottom:20px;padding:.45em 1em;width:auto;text-align:center}
   .countdown{order:4}
   .hero-cta{order:6}
@@ -879,6 +885,9 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg" id="heroBg"></div>
+  <video class="hero-video" id="heroVideo" autoplay loop muted playsinline preload="auto">
+    <source src="assets/hero-bg.mp4" type="video/mp4">
+  </video>
   <noscript><img src="assets/hero.jpg" alt="Prabhu Deva LIVE — Dance Concert, Gas South Arena Atlanta" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3"></noscript>
   <div class="hero-inner">
     <div class="presenters-line reveal in">SIA Events &nbsp;·&nbsp; Chillax Live &nbsp;·&nbsp; M.D.C<br class="mob-br"><span class="mob-hide">&nbsp;·&nbsp;</span><b>Mathangi Entertainment Group</b></div>
@@ -1317,13 +1326,27 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
 </footer>
 
 <script>
+// ---- video autoplay fallback (mobile low-power mode, etc.) ----
+(function(){
+  const v=document.getElementById('heroVideo');
+  if(!v)return;
+  const p=v.play();
+  if(p!==undefined){
+    p.catch(()=>{v.style.display='none';});
+  }
+})();
+
 // ---- nav scroll state ----
 const nav=document.getElementById('nav');
 const heroBg=document.getElementById('heroBg');
+const heroVideo=document.getElementById('heroVideo');
 addEventListener('scroll',()=>{
   const y=scrollY;
   nav.classList.toggle('scrolled',y>40);
-  if(heroBg && y<window.innerHeight){heroBg.style.transform='scale(1.06) translateY('+(y*0.16)+'px)';}
+  if(y<window.innerHeight){
+    if(heroBg)heroBg.style.transform='scale(1.06) translateY('+(y*0.16)+'px)';
+    if(heroVideo)heroVideo.style.transform='translateY('+(y*0.16)+'px)';
+  }
 },{passive:true});
 
 // ---- countdown ----

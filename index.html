@@ -1043,7 +1043,7 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
       <button class="btn btn-gold act-toggle" id="activitiesToggle" aria-expanded="false" aria-controls="activitiesCollapse">
         <span class="act-label">View Activities &amp; Auditions</span> <span class="chev">▾</span>
       </button>
-      <span class="act-toggle-hint">1 open audition · closes Jun 21, 2026</span>
+      <span class="act-toggle-hint">1 open audition · closes Jun 25, 2026</span>
     </div>
 
     <div class="activities-collapse" id="activitiesCollapse">
@@ -1061,7 +1061,7 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
       <!-- Card 2 -->
       <article class="act-card open reveal d2">
         <div class="act-top">
-          <span class="act-status live"><span class="sd"></span><span id="classicalStatusLabel">Open · Until Jun 21, 2026</span></span>
+          <span class="act-status live"><span class="sd"></span><span id="classicalStatusLabel">Extended · Until Jun 25, 2026</span></span>
         </div>
         <h3>Classical Fusion Opening Performance Auditions</h3>
         <p class="act-desc">Classical dancers ages 12 and above are invited to submit a 1-minute unedited Jathi video for the Classical Fusion Opening Performance at Prabhu Deva LIVE Atlanta 2026.</p>
@@ -1074,7 +1074,7 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
         </ul>
         <div class="act-cta" id="classicalOpen">
           <button class="btn btn-gold" id="openAuditionForm">Submit Classical Audition ✦</button>
-          <div class="act-deadline">Submissions close <b>June 21, 2026 · 11:59 PM EST</b></div>
+          <div class="act-deadline">Submissions close <b>June 25, 2026 · 11:59 PM EST</b></div>
         </div>
         <div class="act-closed" id="classicalClosed" style="display:none">
           <b>Classical audition submissions are now closed.</b> Selected dancers will be contacted by the organizers.
@@ -1244,6 +1244,11 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
             <input type="email" id="sp-email" placeholder=" " autocomplete="email" required>
             <label for="sp-email">Work email</label>
             <span class="err">Enter a valid email</span>
+          </div>
+          <div class="field full">
+            <span class="ico">✆</span>
+            <input type="tel" id="sp-phone" placeholder=" " autocomplete="tel">
+            <label for="sp-phone">Phone number (optional)</label>
           </div>
           <div class="field full">
             <span class="ico">◆</span>
@@ -1520,7 +1525,7 @@ activitiesToggle.addEventListener('click',()=>{
   if(open)activitiesCollapse.querySelectorAll('.reveal:not(.in)').forEach(e=>e.classList.add('in'));
 });
 
-const auditionDeadline=new Date('2026-06-21T23:59:59-04:00').getTime();
+const auditionDeadline=new Date('2026-06-25T23:59:59-04:00').getTime();
 const classicalOpen=document.getElementById('classicalOpen');
 const classicalClosed=document.getElementById('classicalClosed');
 const classicalStatusLabel=document.getElementById('classicalStatusLabel');
@@ -1608,6 +1613,7 @@ spForm.addEventListener('submit',e=>{
     action:'sponsorship_enquiry',
     name:spName.value.trim(),
     email:spEmail.value.trim(),
+    phone:document.getElementById('sp-phone').value.trim(),
     company:document.getElementById('sp-company').value.trim(),
     message:document.getElementById('sp-message').value.trim()
   })

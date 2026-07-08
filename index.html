@@ -807,6 +807,23 @@ form.sponsor-form.hide{display:none}
 .logo-img{width:118px;height:118px;border-radius:50%;object-fit:cover;display:block;border:1px solid rgba(212,175,55,.3);box-shadow:0 16px 38px -18px rgba(0,0,0,.9);transition:transform .45s var(--ease)}
 .img-badge:hover{transform:none;border-color:var(--line)}
 .img-badge:hover .logo-img{transform:translateY(-3px) scale(1.02)}
+.community-partners{margin-top:46px}
+.community-partners .label{margin-bottom:22px}
+.partner-logos{gap:clamp(10px,2vw,18px)}
+.partner-badge{
+  min-width:128px;min-height:132px;padding:12px 14px;border-radius:10px;gap:10px;
+}
+.partner-badge .logo-img{
+  width:92px;height:74px;border-radius:0;object-fit:contain;
+  background:transparent;padding:0;border:0;
+}
+.partner-badge .logo-text{
+  width:92px;height:74px;border-radius:8px;display:grid;place-items:center;
+  background:var(--gold-grad);color:#2a1d00;
+  font-family:'Cinzel',serif;font-weight:900;font-size:1rem;letter-spacing:.04em;
+  border:1px solid rgba(212,175,55,.4);
+}
+.partner-badge .sm{font-size:.5rem;letter-spacing:.16em}
 .more-sponsors{text-align:center;margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:8px}
 .more-sponsors .ms-badge{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.66rem;color:var(--gold-2);padding:9px 18px;border:1px dashed rgba(212,175,55,.4);border-radius:30px;background:rgba(212,175,55,.05)}
 .more-sponsors .ms-badge .sd{width:7px;height:7px;border-radius:50%;background:var(--gold-grad);animation:nsPulse 2.4s ease-out infinite}
@@ -868,6 +885,8 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
   .nav-cta .btn-gold{font-size:.6rem;padding:.6em 1em}
   .ts-cta .btn-gold{white-space:normal;text-align:center;font-size:.86rem;padding-left:.9em;padding-right:.9em}
   form.sponsor-form .submit button{font-size:.86rem;white-space:normal;text-align:center}
+  .partner-badge{min-width:calc(50% - 5px);min-height:118px;padding:10px}
+  .partner-badge .logo-img,.partner-badge .logo-text{width:78px;height:60px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto!important}
@@ -1324,6 +1343,21 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
       <div class="logo-badge img-badge"><img class="logo-img" src="assets/logo-chillax.png" alt="Chillax Live logo"><span class="sm">Chillax Live</span></div>
       <div class="logo-badge img-badge"><img class="logo-img" src="uploads/mathangi_entertainment.jpeg" alt="Mathangi Entertainment logo"><span class="sm">Mathangi Entertainment Group</span></div>
       <div class="logo-badge"><span class="lg gold-text">M.D.C</span><span class="sm">Mathangi Dance Company</span></div>
+    </div>
+    <div class="community-partners reveal d2">
+      <div class="label">
+        <span class="eyebrow">Community Partners</span>
+      </div>
+      <div class="logos partner-logos">
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-tama.png" alt="TAMA logo"><span class="sm">TAMA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-gta-transparent.png" alt="GTA logo"><span class="sm">GTA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-gata.png" alt="GATA logo"><span class="sm">GATA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-mata.png" alt="MATA logo"><span class="sm">MATA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-ata.png" alt="ATA logo"><span class="sm">ATA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-gates.jpg" alt="Gates logo"><span class="sm">Gates</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-tta-transparent.png" alt="TTA logo"><span class="sm">TTA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-iaca.png" alt="IACA logo"><span class="sm">IACA</span></div>
+      </div>
     </div>
     <div class="more-sponsors reveal d2">
       <span class="ms-badge"><span class="sd"></span>More Sponsors To Come</span>

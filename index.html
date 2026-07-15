@@ -525,6 +525,42 @@ section{position:relative}
 }
 .headstart .big{font-family:'Cinzel',serif;font-weight:800;font-size:1.7rem;line-height:1;white-space:nowrap}
 .headstart .t{font-size:.92rem;color:var(--muted);text-align:left}
+.seat-map-preview{
+  max-width:840px;margin:0 auto 28px;
+  border:1px solid rgba(212,175,55,.36);border-radius:18px;
+  background:linear-gradient(180deg,rgba(26,18,34,.56),rgba(8,6,11,.58));
+  padding:clamp(14px,2vw,18px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 34px 80px -48px rgba(0,0,0,.95);
+}
+.seat-map-preview img{
+  width:100%;height:auto;border-radius:12px;
+  border:1px solid rgba(212,175,55,.28);
+  box-shadow:0 28px 70px -42px rgba(0,0,0,.95);
+}
+.seat-map-caption{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  margin-top:14px;color:var(--muted);font-size:.86rem;
+}
+.seat-map-caption b{color:var(--gold-2);font-weight:700}
+.unlock-note{
+  max-width:840px;margin:0 auto 18px;padding:18px 20px;border-radius:14px;
+  border:1px dashed rgba(212,175,55,.52);background:rgba(212,175,55,.07);
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  color:var(--muted);text-align:left;
+}
+.unlock-note strong{color:var(--text)}
+.unlock-note .unlock-code{
+  font-family:'Cinzel',serif;font-weight:800;letter-spacing:.08em;color:var(--gold-2);
+  padding:8px 14px;border-radius:10px;border:1px solid rgba(212,175,55,.42);
+  background:rgba(8,6,11,.46);white-space:nowrap;
+}
+.unlock-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.video-help-btn{
+  border:1px solid rgba(212,175,55,.42);background:rgba(255,255,255,.04);color:var(--gold-2);
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;
+  border-radius:10px;padding:10px 14px;cursor:pointer;transition:.3s var(--ease);
+}
+.video-help-btn:hover{border-color:rgba(212,175,55,.72);background:rgba(212,175,55,.09);transform:translateY(-1px)}
 form.reg{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:620px;margin:0 auto}
 .field{position:relative;grid-column:span 1}
 .field.full{grid-column:1 / -1}
@@ -720,6 +756,14 @@ form.aud-form.hide{display:none}
 .aud-success .check{width:70px;height:70px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;color:#2a1d00;box-shadow:0 0 0 6px rgba(212,175,55,.12)}
 .aud-success h4{font-family:'Cinzel',serif;font-weight:700;font-size:1.5rem}
 .aud-success p{color:var(--muted);max-width:42ch}
+.video-modal-card{max-width:520px;padding:clamp(18px,3vw,28px)}
+.video-modal-card h3{padding-right:42px}
+.unlock-video{
+  width:100%;max-height:min(74vh,760px);border-radius:14px;
+  border:1px solid rgba(212,175,55,.35);background:#000;
+  box-shadow:0 30px 80px -40px rgba(0,0,0,.95);
+}
+.video-modal-card .m-sub{margin-bottom:16px}
 
 /* sponsors */
 .sponsors{
@@ -953,7 +997,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="ns-text"><span class="ns-k">Title Sponsor</span><span class="ns-v">Coming Soon</span></span>
     </a>
     <a class="btn btn-ghost" href="#about">Details</a>
-    <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
+    <a class="btn btn-gold" href="#seat-layout">Buy Tickets</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
   </div>
 </header>
@@ -973,7 +1017,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="ns-dot"></span>
       <span class="mm-sp-k">Title Sponsor</span><span class="mm-sp-v">Coming Soon</span>
     </a>
-    <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
+    <a class="btn btn-gold" href="#seat-layout">Buy Tickets ✦</a>
   </div>
 </div>
 
@@ -999,7 +1043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="hero-vip reveal in">
       <span class="vip-k">VIP Announcement</span>
-      <span class="vip-v"><b>VIP ticket holders who purchase before July 15, 2026</b> receive Meet &amp; Greet access on Aug 3.</span>
+      <span class="vip-v"><b>VIP ticket holders who purchase before July 19, 2026</b> receive Meet &amp; Greet access on Aug 3.</span>
       <a class="vip-link" href="#vip-meet-greet">Details</a>
     </div>
 
@@ -1011,7 +1055,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="hero-cta reveal in">
-      <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
+      <a class="btn btn-gold" href="#seat-layout">Buy Tickets ✦</a>
       <a class="btn btn-ghost" href="#about">About the Show</a>
     </div>
   </div>
@@ -1028,7 +1072,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="reveal d2">This is not a screening — it's <strong>Prabhu Deva LIVE</strong>: a curated evening of his most iconic numbers, reimagined with a live ensemble of dancers, lights, and sound built for the arena floor.</p>
       <p class="reveal d2">Show Director: <strong>Hari Kumar</strong></p>
       <div class="reveal d2" style="display:flex;gap:14px;margin-top:26px;flex-wrap:wrap">
-        <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
+        <a class="btn btn-gold" href="#seat-layout">Buy Tickets</a>
         <a class="btn btn-ghost" href="#presenters">Meet the Presenters</a>
       </div>
     </div>
@@ -1096,18 +1140,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="t">Gas South Arena · Duluth, Georgia<br>One night only — secure your seats today.</span>
       </div>
 
+      <div class="unlock-note" id="seat-layout">
+        <span><strong>To get the discount:</strong> on Ticketmaster, click the <strong>Unlock</strong> button first and enter the code. After entering the code, ticket prices will update automatically.</span>
+        <span class="unlock-actions">
+          <span class="unlock-code">PDLOFF</span>
+          <button class="video-help-btn" id="openUnlockVideo" type="button">Watch How</button>
+        </span>
+      </div>
+
+      <figure class="seat-map-preview">
+        <img src="assets/seat-map-preview.png" alt="Prabhu Deva LIVE seat map preview with stage, pit, lower bowl, upper bowl, and Ticketmaster unlock code reminder" loading="lazy">
+        <figcaption class="seat-map-caption">
+          <span><b>Seat Map Preview</b> · Use this as a visual guide before selecting seats on Ticketmaster.</span>
+          <span>Final availability and pricing are shown on Ticketmaster.</span>
+        </figcaption>
+      </figure>
+
       <div class="ticket-cta">
-        <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy Tickets on Ticketmaster ✦</a>
+        <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Continue to Ticketmaster - Click Unlock First ✦</a>
       </div>
 
       <div class="vip-announcement" id="vip-meet-greet">
         <span class="vip-label">★ &nbsp;VIP Meet &amp; Greet Experience</span>
-        <h3><span class="gold-text">VIP Ticket Bonus</span> For Purchases Before July 15</h3>
-        <p class="vip-lead">Eligible VIP ticket holders who purchase their VIP tickets <b>before July 15, 2026</b> will receive exclusive access to a Meet &amp; Greet with Prabhu Deva on <b>August 3, 2026</b>.</p>
+        <h3><span class="gold-text">VIP Ticket Bonus Extended</span> Through July 19</h3>
+        <p class="vip-lead">Eligible VIP ticket holders who purchase their VIP tickets <b>before July 19, 2026</b> will receive exclusive access to a Meet &amp; Greet with Prabhu Deva on <b>August 3, 2026</b>.</p>
         <ul>
           <li>The Meet &amp; Greet will <b>not</b> take place immediately after the concert.</li>
           <li>It will be held on August 3, 2026, at a designated time and limited-access location.</li>
-          <li>Meet &amp; Greet access applies to qualifying VIP ticket purchasers before the July 15 deadline.</li>
+          <li>Meet &amp; Greet access applies to qualifying VIP ticket purchasers before the July 19 deadline.</li>
           <li>Additional details, including venue, check-in instructions, and timing, will be shared with eligible ticket holders closer to the event.</li>
         </ul>
       </div>
@@ -1189,6 +1249,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- UNLOCK VIDEO MODAL -->
+<div class="modal-overlay" id="unlockVideoModal" role="dialog" aria-modal="true" aria-label="How to use the Ticketmaster unlock button">
+  <div class="modal-card video-modal-card">
+    <button class="modal-close" id="closeUnlockVideo" aria-label="Close">×</button>
+    <span class="eyebrow m-eyebrow">Ticketmaster Promo Help</span>
+    <h3>How to Use the Unlock Button</h3>
+    <p class="m-sub">Watch this quick walkthrough before opening Ticketmaster. Use code <b style="color:var(--gold-2)">PDLOFF</b>.</p>
+    <video class="unlock-video" id="unlockVideo" controls preload="metadata" playsinline>
+      <source src="assets/unlock-instructions-web.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
 
 <!-- AUDITION MODAL -->
 <div class="modal-overlay" id="auditionModal" role="dialog" aria-modal="true" aria-label="Classical audition submission">
@@ -1425,7 +1498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="foot-col">
         <h4>Tickets</h4>
-        <a href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Buy on Ticketmaster</a>
+        <a href="#seat-layout">Seat Map &amp; Unlock Code</a>
         <a href="#tickets">Ticket Information</a>
         <a href="#sponsors">Become a Sponsor</a>
       </div>
@@ -1624,6 +1697,30 @@ function setInvalid(input,bad){input.parentElement.classList.toggle('invalid',ba
   document.getElementById('cfPrev').addEventListener('click',()=>setActive(active-1));
   document.getElementById('cfNext').addEventListener('click',()=>setActive(active+1));
   render();
+})();
+
+// ---- ticket unlock help video ----
+(function(){
+  const modal=document.getElementById('unlockVideoModal');
+  const openBtn=document.getElementById('openUnlockVideo');
+  const closeBtn=document.getElementById('closeUnlockVideo');
+  const video=document.getElementById('unlockVideo');
+  if(!modal||!openBtn||!closeBtn||!video)return;
+  function openVideo(){
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    video.currentTime=0;
+    video.play().catch(()=>{});
+  }
+  function closeVideo(){
+    modal.classList.remove('open');
+    video.pause();
+    document.body.style.overflow='';
+  }
+  openBtn.addEventListener('click',openVideo);
+  closeBtn.addEventListener('click',closeVideo);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeVideo();});
+  addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeVideo();});
 })();
 
 // ---- activities: audition date gating + modal + form ----

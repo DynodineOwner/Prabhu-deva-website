@@ -100,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   },
   "offers": {
     "@type": "Offer",
-    "url": "https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap",
+    "url": "https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=parent",
     "availability": "https://schema.org/InStock",
     "validFrom": "2026-06-01",
     "priceCurrency": "USD"
@@ -357,25 +357,6 @@ nav.links a:hover::after{width:100%}
 .event-bar .item .k{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.6rem;color:var(--muted-2)}
 .event-bar .item .v{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(1rem,2.6vw,1.5rem);letter-spacing:.04em}
 .event-bar .sep{width:1px;height:34px;background:linear-gradient(180deg,transparent,var(--line),transparent)}
-
-.hero-vip{
-  display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;
-  max-width:760px;padding:12px 18px;border-radius:12px;
-  background:linear-gradient(180deg,rgba(26,18,34,.82),rgba(8,6,11,.76));
-  border:1px solid rgba(212,175,55,.42);
-  box-shadow:0 16px 42px -26px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.06);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-}
-.hero-vip .vip-k{
-  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;
-  font-size:.62rem;color:var(--gold-2);
-}
-.hero-vip .vip-v{font-size:.9rem;color:#efe7da}
-.hero-vip .vip-v b{color:var(--gold-2);font-weight:700}
-.hero-vip .vip-link{
-  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;
-  color:var(--gold-2);border-bottom:1px solid rgba(212,175,55,.4);
-}
 
 /* countdown */
 .countdown{display:flex;gap:clamp(8px,1.6vw,16px);align-items:stretch}
@@ -941,10 +922,6 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
   .wordmark{font-size:clamp(2.6rem,10vw,3.4rem)}
   .hero-bg{display:block;background-image:url('assets/hero-mobile.jpg');background-position:50% 25%}
   .hero .presenters-line{order:5;font-size:.65rem;letter-spacing:.06em;margin-bottom:20px;padding:.45em 1em;width:auto;text-align:center}
-  .hero-vip{order:3;padding:10px 12px;gap:7px}
-  .hero-vip .vip-k{font-size:.56rem;letter-spacing:.16em}
-  .hero-vip .vip-v{font-size:.78rem;line-height:1.35;text-align:center}
-  .hero-vip .vip-link{font-size:.58rem}
   .countdown{order:4}
   .hero-cta{order:6}
   .hero-cta .btn-ghost{display:none}
@@ -997,7 +974,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="ns-text"><span class="ns-k">Title Sponsor</span><span class="ns-v">Coming Soon</span></span>
     </a>
     <a class="btn btn-ghost" href="#about">Details</a>
-    <a class="btn btn-gold" href="#seat-layout">Buy Tickets</a>
+    <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=parent" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
   </div>
 </header>
@@ -1017,7 +994,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="ns-dot"></span>
       <span class="mm-sp-k">Title Sponsor</span><span class="mm-sp-v">Coming Soon</span>
     </a>
-    <a class="btn btn-gold" href="#seat-layout">Buy Tickets ✦</a>
+    <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=parent" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
   </div>
 </div>
 
@@ -1041,12 +1018,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="item"><span class="k">Date</span><span class="v gold-text">Aug 2, 2026</span></div>
     </div>
 
-    <div class="hero-vip reveal in">
-      <span class="vip-k">VIP Announcement</span>
-      <span class="vip-v"><b>VIP ticket holders who purchase before July 19, 2026</b> receive Meet &amp; Greet access on Aug 3.</span>
-      <a class="vip-link" href="#vip-meet-greet">Details</a>
-    </div>
-
     <div class="countdown reveal in" id="countdown" aria-label="Countdown to showtime">
       <div class="cd-cell"><span class="num" id="cd-d">00</span><span class="lab">Days</span></div>
       <div class="cd-cell"><span class="num" id="cd-h">00</span><span class="lab">Hours</span></div>
@@ -1055,7 +1026,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="hero-cta reveal in">
-      <a class="btn btn-gold" href="#seat-layout">Buy Tickets ✦</a>
+      <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=parent" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
       <a class="btn btn-ghost" href="#about">About the Show</a>
     </div>
   </div>
@@ -1072,7 +1043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="reveal d2">This is not a screening — it's <strong>Prabhu Deva LIVE</strong>: a curated evening of his most iconic numbers, reimagined with a live ensemble of dancers, lights, and sound built for the arena floor.</p>
       <p class="reveal d2">Show Director: <strong>Hari Kumar</strong></p>
       <div class="reveal d2" style="display:flex;gap:14px;margin-top:26px;flex-wrap:wrap">
-        <a class="btn btn-gold" href="#seat-layout">Buy Tickets</a>
+        <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=parent" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
         <a class="btn btn-ghost" href="#presenters">Meet the Presenters</a>
       </div>
     </div>
@@ -1132,43 +1103,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="presales-card reveal">
       <div style="display:flex;justify-content:center"><span class="badge">● &nbsp;Official Tickets — On Sale Now</span></div>
-      <h2>Choose Your Seats.<br><span class="gold-text">See Prabhu Deva Live.</span></h2>
-      <p class="lead">Tickets for Prabhu Deva LIVE at Gas South Arena are now available through <b>Ticketmaster</b>. Select your seats and complete your purchase on the official ticketing page.</p>
-
       <div class="headstart">
         <span class="big gold-text">AUG 2</span>
         <span class="t">Gas South Arena · Duluth, Georgia<br>One night only — secure your seats today.</span>
       </div>
 
-      <div class="unlock-note" id="seat-layout">
-        <span><strong>To get the discount:</strong> on Ticketmaster, click the <strong>Unlock</strong> button first and enter the code. After entering the code, ticket prices will update automatically.</span>
-        <span class="unlock-actions">
-          <span class="unlock-code">PDLOFF</span>
-          <button class="video-help-btn" id="openUnlockVideo" type="button">Watch How</button>
-        </span>
-      </div>
-
-      <figure class="seat-map-preview">
-        <img src="assets/seat-map-preview.png" alt="Prabhu Deva LIVE seat map preview with stage, pit, lower bowl, upper bowl, and Ticketmaster unlock code reminder" loading="lazy">
-        <figcaption class="seat-map-caption">
-          <span><b>Seat Map Preview</b> · Use this as a visual guide before selecting seats on Ticketmaster.</span>
-          <span>Final availability and pricing are shown on Ticketmaster.</span>
-        </figcaption>
-      </figure>
-
-      <div class="ticket-cta">
-        <a class="btn btn-gold" href="https://www.ticketmaster.com/prabhudeva-live-in-atlanta-duluth-georgia-08-02-2026/event/0E0064D0AEB89AD1#seatMap" target="_blank" rel="noopener noreferrer">Continue to Ticketmaster ✦</a>
-      </div>
-
       <div class="vip-announcement" id="vip-meet-greet">
-        <span class="vip-label">★ &nbsp;VIP Meet &amp; Greet Experience</span>
-        <h3><span class="gold-text">VIP Ticket Bonus Extended</span> Through July 19</h3>
-        <p class="vip-lead">Eligible VIP ticket holders who purchase their VIP tickets <b>before July 19, 2026</b> will receive exclusive access to a Meet &amp; Greet with Prabhu Deva on <b>August 3, 2026</b>.</p>
+        <span class="vip-label">★ &nbsp;VIP Meet &amp; Greet Update</span>
+        <h3><span class="gold-text">Meet &amp; Greet Access Window</span> Is Now Closed</h3>
+        <p class="vip-lead">The VIP Meet &amp; Greet offer has ended. Eligible VIP ticket holders who qualified before the deadline will receive further instructions from the organizers.</p>
         <ul>
-          <li>The Meet &amp; Greet will <b>not</b> take place immediately after the concert.</li>
-          <li>It will be held on August 3, 2026, at a designated time and limited-access location.</li>
-          <li>Meet &amp; Greet access applies to qualifying VIP ticket purchasers before the July 19 deadline.</li>
-          <li>Additional details, including venue, check-in instructions, and timing, will be shared with eligible ticket holders closer to the event.</li>
+          <li>The Meet &amp; Greet is scheduled for <b>August 3, 2026</b>, not immediately after the concert.</li>
+          <li>Access is limited to previously qualified VIP ticket holders.</li>
+          <li>Venue, check-in instructions, and timing will be shared directly with eligible ticket holders.</li>
         </ul>
       </div>
     </div>
@@ -1249,19 +1196,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-<!-- UNLOCK VIDEO MODAL -->
-<div class="modal-overlay" id="unlockVideoModal" role="dialog" aria-modal="true" aria-label="How to use the Ticketmaster unlock button">
-  <div class="modal-card video-modal-card">
-    <button class="modal-close" id="closeUnlockVideo" aria-label="Close">×</button>
-    <span class="eyebrow m-eyebrow">Ticketmaster Promo Help</span>
-    <h3>How to Use the Unlock Button</h3>
-    <p class="m-sub">Watch this quick walkthrough before opening Ticketmaster. Use code <b style="color:var(--gold-2)">PDLOFF</b>.</p>
-    <video class="unlock-video" id="unlockVideo" controls preload="metadata" playsinline>
-      <source src="assets/unlock-instructions-web.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
 
 <!-- AUDITION MODAL -->
 <div class="modal-overlay" id="auditionModal" role="dialog" aria-modal="true" aria-label="Classical audition submission">
@@ -1461,6 +1395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-gates.jpg" alt="Gates logo"><span class="sm">Gates</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-tta-transparent.png" alt="TTA logo"><span class="sm">TTA</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-iaca.png" alt="IACA logo"><span class="sm">IACA</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/sponsor-greenville-tamil-sangam.jpg" alt="Greenville Tamil Sangam logo"><span class="sm">Greenville Tamil Sangam</span></div>
       </div>
     </div>
     <div class="more-sponsors reveal d2">
@@ -1498,7 +1433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="foot-col">
         <h4>Tickets</h4>
-        <a href="#seat-layout">Seat Map &amp; Unlock Code</a>
+        <a href="#tickets">Tickets &amp; Seat Map</a>
         <a href="#tickets">Ticket Information</a>
         <a href="#sponsors">Become a Sponsor</a>
       </div>
@@ -1697,30 +1632,6 @@ function setInvalid(input,bad){input.parentElement.classList.toggle('invalid',ba
   document.getElementById('cfPrev').addEventListener('click',()=>setActive(active-1));
   document.getElementById('cfNext').addEventListener('click',()=>setActive(active+1));
   render();
-})();
-
-// ---- ticket unlock help video ----
-(function(){
-  const modal=document.getElementById('unlockVideoModal');
-  const openBtn=document.getElementById('openUnlockVideo');
-  const closeBtn=document.getElementById('closeUnlockVideo');
-  const video=document.getElementById('unlockVideo');
-  if(!modal||!openBtn||!closeBtn||!video)return;
-  function openVideo(){
-    modal.classList.add('open');
-    document.body.style.overflow='hidden';
-    video.currentTime=0;
-    video.play().catch(()=>{});
-  }
-  function closeVideo(){
-    modal.classList.remove('open');
-    video.pause();
-    document.body.style.overflow='';
-  }
-  openBtn.addEventListener('click',openVideo);
-  closeBtn.addEventListener('click',closeVideo);
-  modal.addEventListener('click',e=>{if(e.target===modal)closeVideo();});
-  addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeVideo();});
 })();
 
 // ---- activities: audition date gating + modal + form ----

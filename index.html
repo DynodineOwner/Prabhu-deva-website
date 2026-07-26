@@ -864,6 +864,20 @@ form.sponsor-form.hide{display:none}
 .community-partners{margin-top:46px}
 .community-partners .label{margin-bottom:22px}
 .partner-logos{gap:clamp(10px,2vw,18px)}
+/* top logo marquee */
+.logo-marquee{position:relative;overflow:hidden;padding:14px 0;background:linear-gradient(180deg,#0a0710,#060409);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.logo-marquee::before,.logo-marquee::after{content:'';position:absolute;top:0;bottom:0;width:clamp(36px,9vw,90px);z-index:2;pointer-events:none}
+.logo-marquee::before{left:0;background:linear-gradient(90deg,#070510,transparent)}
+.logo-marquee::after{right:0;background:linear-gradient(270deg,#070510,transparent)}
+.lm-track{display:flex;align-items:center;gap:10px;width:max-content;animation:lmScroll 62s linear infinite;will-change:transform}
+.logo-marquee:hover .lm-track{animation-play-state:paused}
+.lm-item{flex:none;display:flex;align-items:center;gap:9px;height:52px;padding:6px 16px 6px 8px;border-radius:26px;border:1px solid var(--line-soft);background:rgba(255,255,255,.04);box-sizing:border-box}
+.lm-logo{flex:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center}
+.lm-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.lm-name{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:#e8dcc6;white-space:nowrap}
+@keyframes lmScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.lm-item{height:46px;padding:5px 13px 5px 7px;gap:7px}.lm-logo{width:32px;height:32px}.lm-name{font-size:.66rem;letter-spacing:.06em}.lm-track{gap:8px}}
+@media(prefers-reduced-motion:reduce){.lm-track{animation:none}.logo-marquee{overflow-x:auto}}
 .partner-badge{
   min-width:128px;min-height:132px;padding:12px 14px;border-radius:10px;gap:10px;
 }
@@ -1044,6 +1058,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="scrollcue"><span>Scroll</span><span class="dot"></span></div>
+</section>
+
+<!-- PARTNER LOGO MARQUEE -->
+<section class="logo-marquee" aria-label="Presenters and partners">
+  <div class="lm-track" id="lmTrack">
+    <span class="lm-item"><span class="lm-logo"><img src="assets/logo-sia.jpg" alt="SIA Events" loading="lazy"></span><span class="lm-name">SIA Events</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/logo-chillax.png" alt="Chillax Live" loading="lazy"></span><span class="lm-name">Chillax Live</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="uploads/mathangi_entertainment.jpeg" alt="Mathangi Entertainment Group" loading="lazy"></span><span class="lm-name">Mathangi Entertainment Group</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gama.png" alt="GAMA" loading="lazy"></span><span class="lm-name">GAMA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-amt.png" alt="ATM" loading="lazy"></span><span class="lm-name">ATM</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-tama.png" alt="TAMA" loading="lazy"></span><span class="lm-name">TAMA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gta-transparent.png" alt="GTA" loading="lazy"></span><span class="lm-name">GTA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gata.png" alt="GATA" loading="lazy"></span><span class="lm-name">GATA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-mata.png" alt="MATA" loading="lazy"></span><span class="lm-name">MATA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-ata.png" alt="ATA" loading="lazy"></span><span class="lm-name">ATA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gates.jpg" alt="Gates" loading="lazy"></span><span class="lm-name">Gates</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-tta-transparent.png" alt="TTA" loading="lazy"></span><span class="lm-name">TTA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-iaca.png" alt="IACA" loading="lazy"></span><span class="lm-name">IACA</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-greenville-tamil-sangam.jpg" alt="Greenville Tamil Sangam" loading="lazy"></span><span class="lm-name">Greenville Tamil Sangam</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/partner-kkr-genai.png" alt="KKR GenAI Innovations" loading="lazy"></span><span class="lm-name">KKR GenAI Innovations</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/partner-reflections.png" alt="Reflections" loading="lazy"></span><span class="lm-name">Reflections</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/partner-ballis-dance.jpg" alt="Balli's Dance Studio" loading="lazy"></span><span class="lm-name">Balli's Dance Studio</span></span>
+    <span class="lm-item"><span class="lm-logo"><img src="assets/partner-sri-dutt-raga.jpg" alt="Sri Dutt Raga Dance Academy" loading="lazy"></span><span class="lm-name">Sri Dutt Raga Dance Academy</span></span>
+  </div>
 </section>
 
 <!-- ABOUT -->
@@ -1412,6 +1450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-kkr-genai.png" alt="KKR GenAI Innovations logo"><span class="sm">KKR GenAI Innovations</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-reflections.png" alt="Reflections logo"><span class="sm">Reflections</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-ballis-dance.jpg" alt="Balli's Dance Studio logo"><span class="sm">Balli's Dance Studio</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-sri-dutt-raga.jpg" alt="Sri Dutt Raga Dance Academy logo"><span class="sm">Sri Dutt Raga Dance Academy</span></div>
       </div>
     </div>
     <div class="more-sponsors reveal d2">
@@ -1520,6 +1559,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       track('cta_whatsapp', {button_location: 'floating', link_url: href});
     }
   }, true);
+})();
+
+// ---- seamless logo marquee (duplicate the strip once so the loop has no gap) ----
+(function(){
+  var t=document.getElementById('lmTrack');
+  if(!t) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  t.innerHTML += t.innerHTML;
 })();
 
 // ---- video autoplay fallback (mobile low-power mode, etc.) ----

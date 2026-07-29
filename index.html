@@ -376,6 +376,15 @@ nav.links a:hover::after{width:100%}
 }
 .cd-cell .lab{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.54rem;color:var(--muted)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+/* flash sale banner */
+.flash-sale{display:inline-flex;align-items:center;gap:12px;padding:8px 9px 8px 15px;border-radius:999px;text-decoration:none;background:linear-gradient(90deg,rgba(212,175,55,.16),rgba(176,32,44,.2));border:1px solid rgba(212,175,55,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:fsPulse 2.2s ease-out infinite;transition:transform .25s var(--ease)}
+.flash-sale:hover{transform:translateY(-2px)}
+.fs-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:600;color:#ffd76a;white-space:nowrap}
+.fs-text{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:#efe7da;white-space:nowrap}
+.fs-text b{color:#ffd76a;font-weight:700}
+.fs-go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;color:#2a1d00;background:var(--gold-grad);padding:6px 13px;border-radius:999px;white-space:nowrap}
+@keyframes fsPulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.42)}70%{box-shadow:0 0 0 13px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+@media(max-width:560px){.flash-sale{gap:8px;padding:7px 8px 7px 13px}.fs-tag{font-size:.62rem}.fs-text{font-size:.7rem}.fs-go{font-size:.62rem;padding:5px 11px}}
 .mob-br{display:none}
 .scrollcue{
   position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
@@ -864,6 +873,13 @@ form.sponsor-form.hide{display:none}
 .community-partners{margin-top:46px}
 .community-partners .label{margin-bottom:22px}
 .partner-logos{gap:clamp(10px,2vw,18px)}
+/* main presenter logos (hero) */
+.main-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:12px;margin:0 auto;max-width:560px}
+.ml-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:12px 20px;border-radius:14px;border:1px solid rgba(212,175,55,.34);background:rgba(8,6,12,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ml-logo{width:52px;height:52px;display:flex;align-items:center;justify-content:center}
+.ml-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.ml-name{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;color:#efe7da;white-space:nowrap}
+@media(max-width:560px){.main-logos{gap:9px}.ml-item{padding:9px 13px;gap:5px}.ml-logo{width:40px;height:40px}.ml-name{font-size:.56rem;letter-spacing:.06em}}
 /* partner logo ticker (in hero, under the title) */
 .logo-marquee{position:relative;overflow:hidden;width:100%;max-width:600px;margin:2px auto 0;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
@@ -949,6 +965,7 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
   .hero-bg{display:block;background-image:url('assets/hero-mobile.jpg');background-position:50% 25%}
   .hero .presenters-line{order:5;font-size:.65rem;letter-spacing:.06em;margin-bottom:20px;padding:.45em 1em;width:auto;text-align:center}
   .countdown{order:4}
+  .flash-sale{order:5}
   .hero-cta{order:6}
   .hero-cta .btn-ghost{display:none}
   .mob-br{display:block}
@@ -1033,17 +1050,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <noscript><img src="assets/hero.jpg" alt="Prabhu Deva LIVE — Dance Concert, Gas South Arena Atlanta" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3"></noscript>
   <div class="hero-inner">
     <div class="presenters-line reveal in">SIA Events &nbsp;·&nbsp; Chillax Live &nbsp;·&nbsp; M.D.C<br class="mob-br"><span class="mob-hide">&nbsp;·&nbsp;</span><b>Mathangi Entertainment Group</b></div>
-    <h1 class="wordmark gold-text shimmer reveal in">PRABHU&nbsp;DEVA<span class="live">LIVE</span></h1>
+    <h1 class="wordmark gold-text shimmer reveal in">PRABHU&nbsp;DEVA</h1>
+
+    <!-- main presenter logos -->
+    <div class="main-logos reveal in">
+      <span class="ml-item"><span class="ml-logo"><img src="assets/logo-sia.jpg" alt="SIA Events" loading="lazy"></span><span class="ml-name">SIA Events</span></span>
+      <span class="ml-item"><span class="ml-logo"><img src="assets/logo-chillax.png" alt="Chillax Live" loading="lazy"></span><span class="ml-name">Chillax Live</span></span>
+      <span class="ml-item"><span class="ml-logo"><img src="uploads/mathangi_entertainment.jpeg" alt="Mathangi Entertainment Group" loading="lazy"></span><span class="ml-name">Mathangi</span></span>
+    </div>
 
     <!-- partner logo ticker -->
-    <section class="logo-marquee reveal in" aria-label="Presenters and partners">
+    <section class="logo-marquee reveal in" aria-label="Partners and sponsors">
       <div class="lm-track" id="lmTrack">
-        <span class="lm-item"><span class="lm-logo"><img src="assets/logo-sia.jpg" alt="SIA Events" loading="lazy"></span><span class="lm-name">SIA Events</span></span>
-        <span class="lm-item"><span class="lm-logo"><img src="assets/logo-chillax.png" alt="Chillax Live" loading="lazy"></span><span class="lm-name">Chillax Live</span></span>
-        <span class="lm-item"><span class="lm-logo"><img src="uploads/mathangi_entertainment.jpeg" alt="Mathangi Entertainment Group" loading="lazy"></span><span class="lm-name">Mathangi Entertainment Group</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gama.png" alt="GAMA" loading="lazy"></span><span class="lm-name">GAMA</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-amt.png" alt="ATM" loading="lazy"></span><span class="lm-name">ATM</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-tama.png" alt="TAMA" loading="lazy"></span><span class="lm-name">TAMA</span></span>
+        <span class="lm-item"><span class="lm-logo"><img src="uploads/dynodine_logo.png" alt="DynoDine" loading="lazy"></span><span class="lm-name">DynoDine</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gta-transparent.png" alt="GTA" loading="lazy"></span><span class="lm-name">GTA</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-gata.png" alt="GATA" loading="lazy"></span><span class="lm-name">GATA</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/sponsor-mata.png" alt="MATA" loading="lazy"></span><span class="lm-name">MATA</span></span>
@@ -1056,6 +1078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="lm-item"><span class="lm-logo"><img src="assets/partner-reflections.png" alt="Reflections" loading="lazy"></span><span class="lm-name">Reflections</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/partner-ballis-dance.jpg" alt="Balli's Dance Studio" loading="lazy"></span><span class="lm-name">Balli's Dance Studio</span></span>
         <span class="lm-item"><span class="lm-logo"><img src="assets/partner-sri-dutt-raga.jpg" alt="Sri Dutt Raga Dance Academy" loading="lazy"></span><span class="lm-name">Sri Dutt Raga Dance Academy</span></span>
+        <span class="lm-item"><span class="lm-logo"><img src="assets/partner-shivs-institute-dance.jpg" alt="Shiv's Institute of Dance" loading="lazy"></span><span class="lm-name">Shiv's Institute of Dance</span></span>
       </div>
     </section>
 
@@ -1075,6 +1098,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="cd-cell"><span class="num" id="cd-m">00</span><span class="lab">Mins</span></div>
       <div class="cd-cell"><span class="num" id="cd-s">00</span><span class="lab">Secs</span></div>
     </div>
+
+    <a class="flash-sale reveal in" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=chillaxsia" target="_blank" rel="noopener noreferrer" aria-label="Flash sale: get 25% off tickets">
+      <span class="fs-tag">⚡ Flash Sale</span>
+      <span class="fs-text">Get <b>25% Off</b> Tickets</span>
+      <span class="fs-go">Grab Now →</span>
+    </a>
 
     <div class="hero-cta reveal in">
       <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
@@ -1451,6 +1480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-reflections.png" alt="Reflections logo"><span class="sm">Reflections</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-ballis-dance.jpg" alt="Balli's Dance Studio logo"><span class="sm">Balli's Dance Studio</span></div>
         <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-sri-dutt-raga.jpg" alt="Sri Dutt Raga Dance Academy logo"><span class="sm">Sri Dutt Raga Dance Academy</span></div>
+        <div class="logo-badge img-badge partner-badge"><img class="logo-img" src="assets/partner-shivs-institute-dance.jpg" alt="Shiv's Institute of Dance logo"><span class="sm">Shiv's Institute of Dance</span></div>
       </div>
     </div>
     <div class="more-sponsors reveal d2">

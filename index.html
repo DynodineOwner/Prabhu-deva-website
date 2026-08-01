@@ -378,15 +378,6 @@ nav.links a:hover::after{width:100%}
 }
 .cd-cell .lab{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.54rem;color:var(--muted)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
-/* flash sale banner */
-.flash-sale{display:inline-flex;align-items:center;gap:12px;padding:8px 9px 8px 15px;border-radius:999px;text-decoration:none;background:linear-gradient(90deg,rgba(212,175,55,.16),rgba(176,32,44,.2));border:1px solid rgba(212,175,55,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:fsPulse 2.2s ease-out infinite;transition:transform .25s var(--ease)}
-.flash-sale:hover{transform:translateY(-2px)}
-.fs-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:600;color:#ffd76a;white-space:nowrap}
-.fs-text{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:#efe7da;white-space:nowrap}
-.fs-text b{color:#ffd76a;font-weight:700}
-.fs-go{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;color:#2a1d00;background:var(--gold-grad);padding:6px 13px;border-radius:999px;white-space:nowrap}
-@keyframes fsPulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.42)}70%{box-shadow:0 0 0 13px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
-@media(max-width:560px){.flash-sale{gap:8px;padding:7px 8px 7px 13px}.fs-tag{font-size:.62rem}.fs-text{font-size:.7rem}.fs-go{font-size:.62rem;padding:5px 11px}}
 .mob-br{display:none}
 .scrollcue{
   position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
@@ -577,28 +568,6 @@ form.reg .submit button{width:100%;justify-content:center;font-size:.98rem;paddi
 .reg-note a{color:var(--gold-2);border-bottom:1px solid rgba(212,175,55,.3)}
 .ticket-cta{display:flex;justify-content:center;margin-top:28px}
 .ticket-cta .btn{justify-content:center;min-width:min(100%,360px);font-size:1rem;padding:1.08em 2em}
-.vip-announcement{
-  margin:30px auto 0;max-width:760px;text-align:left;
-  border:1px solid rgba(212,175,55,.38);border-radius:16px;
-  background:
-    radial-gradient(80% 100% at 12% 0%,rgba(212,175,55,.12),transparent 58%),
-    linear-gradient(180deg,rgba(30,21,40,.62),rgba(10,7,16,.62));
-  padding:clamp(22px,3vw,32px);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 28px 70px -44px rgba(0,0,0,.9);
-}
-.vip-announcement .vip-label{
-  display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;
-  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.62rem;
-  color:var(--gold-2);padding:7px 14px;border-radius:30px;border:1px solid var(--line);
-  background:rgba(212,175,55,.07);
-}
-.vip-announcement h3{font-family:'Cinzel',serif;font-size:clamp(1.35rem,3vw,2rem);line-height:1.12;margin-bottom:10px}
-.vip-announcement .vip-lead{color:var(--text);font-size:1rem;margin-bottom:16px}
-.vip-announcement .vip-lead b{color:var(--gold-2)}
-.vip-announcement ul{list-style:none;display:grid;gap:10px;margin:0;padding:0}
-.vip-announcement li{position:relative;padding-left:22px;color:var(--muted);font-size:.94rem;line-height:1.5}
-.vip-announcement li::before{content:"✦";color:var(--gold-2);font-size:.78rem;position:absolute;left:0;top:.35em}
-.vip-announcement li b{color:var(--text);font-weight:600}
 /* success */
 .success{display:none;text-align:center;flex-direction:column;align-items:center;gap:10px;animation:pop .5s var(--ease)}
 .success.show{display:flex}
@@ -967,7 +936,6 @@ footer{background:#060409;border-top:1px solid var(--line);padding:clamp(48px,7v
   .hero-bg{display:block;background-image:url('assets/hero-mobile.jpg');background-position:50% 25%}
   .hero .presenters-line{display:none}
   .countdown{order:4}
-  .flash-sale{order:5}
   .hero-cta{order:6}
   .hero-cta .btn-ghost{display:none}
   .mob-br{display:block}
@@ -1014,10 +982,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#presenters">Presenters</a>
   </nav>
   <div class="nav-cta">
-    <a class="nav-sponsor" href="#sponsors" aria-label="Title sponsor position open — coming soon">
-      <span class="ns-dot"></span>
-      <span class="ns-text"><span class="ns-k">Title Sponsor</span><span class="ns-v">Coming Soon</span></span>
-    </a>
     <a class="btn btn-ghost" href="#about">Details</a>
     <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
@@ -1035,10 +999,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="mm-link" href="#presenters">Presenters</a>
   </nav>
   <div class="mm-foot">
-    <a class="mm-sponsor" href="#sponsors">
-      <span class="ns-dot"></span>
-      <span class="mm-sp-k">Title Sponsor</span><span class="mm-sp-v">Coming Soon</span>
-    </a>
     <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
   </div>
 </div>
@@ -1100,12 +1060,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="cd-cell"><span class="num" id="cd-m">00</span><span class="lab">Mins</span></div>
       <div class="cd-cell"><span class="num" id="cd-s">00</span><span class="lab">Secs</span></div>
     </div>
-
-    <a class="flash-sale reveal in" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1?did=chillaxsia" target="_blank" rel="noopener noreferrer" aria-label="Flash sale: get 25% off tickets">
-      <span class="fs-tag">⚡ Flash Sale</span>
-      <span class="fs-text">Get <b>25% Off</b> Tickets</span>
-      <span class="fs-go">Grab Now →</span>
-    </a>
 
     <div class="hero-cta reveal in">
       <a class="btn btn-gold" href="https://www.ticketmaster.com/event/0E0064D0AEB89AD1" target="_blank" rel="noopener noreferrer">Buy Tickets ✦</a>
@@ -1188,17 +1142,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="headstart">
         <span class="big gold-text">AUG 2</span>
         <span class="t">Gas South Arena · Duluth, Georgia<br>One night only — secure your seats today.</span>
-      </div>
-
-      <div class="vip-announcement" id="vip-meet-greet">
-        <span class="vip-label">★ &nbsp;VIP Meet &amp; Greet Update</span>
-        <h3><span class="gold-text">Meet &amp; Greet Access Window</span> Is Now Closed</h3>
-        <p class="vip-lead">The VIP Meet &amp; Greet offer has ended. Eligible VIP ticket holders who qualified before the deadline will receive further instructions from the organizers.</p>
-        <ul>
-          <li>The Meet &amp; Greet is scheduled for <b>August 3, 2026</b>, not immediately after the concert.</li>
-          <li>Access is limited to previously qualified VIP ticket holders.</li>
-          <li>Venue, check-in instructions, and timing will be shared directly with eligible ticket holders.</li>
-        </ul>
       </div>
     </div>
   </div>
